@@ -4,7 +4,6 @@ import (
     "busmap.vn/librarycore/api/base"
     api_classroom "busmap.vn/librarycore/api/routers/api-classroom"
     "busmap.vn/librarycore/config"
-    "fmt"
     "github.com/gin-contrib/cors"
     "github.com/gin-gonic/gin"
     "go.elastic.co/apm/module/apmgin"
@@ -26,10 +25,7 @@ func Initialize() *gin.Engine {
         "content-type", "accept",
         "referer", "user-agent",
     }
-    corConfig.AllowCredentials = true
-    r.Use(cors.Default())
-
-    fmt.Println(corConfig)
+    r.Use(cors.New(corConfig))
 
     r.Use(apmgin.Middleware(r))
     r.Use(gin.Logger())

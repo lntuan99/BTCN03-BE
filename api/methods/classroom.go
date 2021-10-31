@@ -3,7 +3,6 @@ package methods
 import (
     "busmap.vn/librarycore/api/base"
     req_res "busmap.vn/librarycore/api/req_res_struct"
-    "busmap.vn/librarycore/config"
     "busmap.vn/librarycore/model"
     "busmap.vn/librarycore/util"
     "fmt"
@@ -25,6 +24,8 @@ func MethodGetClassroomList(c *gin.Context) (bool, string, interface{}) {
 }
 
 func MethodCreateClassroom(c *gin.Context) (bool, string, interface{}) {
+    _ = c.Request.ParseMultipartForm(20971520)
+
     var classroomInfo req_res.PostCreateClassroom
     if err := c.ShouldBind(&classroomInfo); err != nil {
         return false, base.CodeBadRequest, nil
@@ -49,13 +50,19 @@ func MethodCreateClassroom(c *gin.Context) (bool, string, interface{}) {
         return false, base.CodeCreateClassroomFail, nil
     }
 
-    coverImage, err := c.FormFile("coverImage")
-    if err != nil {
-        newFileName := fmt.Sprintf("%v_%v.%v",coverImage.Filename, time.Now().Unix(), filepath.Ext(coverImage.Filename))
-        folderDst := fmt.Sprintf("%v/system/classrooms/%v", config.Config.MediaDir, newClassroom.ID)
-        util.CreateFolderV2(folderDst)
+    _, header, errFile := c.Request.FormFile("coverImage")
+    if errFile == nil {
+        newFileName := fmt.Sprintf("%v%v", time.Now().Unix(), filepath.Ext(header.Filename))
+        folderDst := fmt.Sprintf("/system/classrooms/%v", newClassroom.ID)
+
+        util.CreateFolder(folderDst)
+
         fileDst := fmt.Sprintf("%v/%v", folderDst, newFileName)
-        _ = c.SaveUploadedFile(coverImage, fileDst)
+        if err := util.SaveUploadedFile(header, folderDst, newFileName); err == nil {
+            model.DBInstance.
+                Model(&newClassroom).
+                Update("cover_image_url", fileDst)
+        }
     }
 
     return true, base.CodeSuccess, nil

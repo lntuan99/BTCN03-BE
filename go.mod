@@ -20,6 +20,7 @@ require (
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/gookit/i18n v1.1.3
 	github.com/gorilla/sessions v1.2.1 // indirect
+	github.com/itsjamie/gin-cors v0.0.0-20160420130702-97b4a9da7933 // indirect
 	github.com/jinzhu/configor v1.2.1 // indirect
 	github.com/jinzhu/copier v0.3.2 // indirect
 	github.com/jinzhu/gorm v1.9.16

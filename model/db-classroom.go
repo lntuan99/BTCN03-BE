@@ -1,6 +1,9 @@
 package model
 
-import "github.com/jinzhu/gorm"
+import (
+	"busmap.vn/librarycore/util"
+	"github.com/jinzhu/gorm"
+)
 
 type Classroom struct {
 	gorm.Model
@@ -24,7 +27,7 @@ func (classroom Classroom) ToRes() ClassroomRes {
 	return ClassroomRes{
 		ID:            classroom.ID,
 		Name:          classroom.Name,
-		CoverImageURL: classroom.CoverImageURL,
+		CoverImageURL: util.SubUrlToFullUrl(classroom.CoverImageURL),
 		Code:          classroom.Code,
 		Description:   classroom.Description,
 	}
