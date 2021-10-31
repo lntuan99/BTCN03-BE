@@ -60,7 +60,7 @@ type SystemConfig struct {
 var Config *SystemConfig
 
 func FetchEnvironmentVariables() {
-    EnvType := os.Getenv("BUSMAP_ENV")
+    EnvType := os.Getenv("ENV")
     Config = NewSystemConfig(EnvType)
 }
 
