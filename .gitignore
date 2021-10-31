@@ -1,0 +1,10 @@
+.idea
+public
+.vscode
+__debug_bin
+vendor
+build
+logs
+zzz/config/*.json
+zzz/*.json
+go.*
