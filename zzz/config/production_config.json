@@ -1,0 +1,14 @@
+{
+  "postgres_connection_string": "host=ec2-52-6-29-180.compute-1.amazonaws.com port=5432 user=kyqgwnnwuqrghu dbname=d6bjrama57cuak password=fa826648742e0138cdc16d2526c8425eddaa8c1a027e58e1c979ab11949bb442",
+  "worker_quantity": 5,
+  "postgres_log_mode": true,
+  "debug_api": true,
+  "app_name": "hcmus_web_2",
+  "organization_name": "LNT",
+  "cdn_url": "40.76.98.237:9001",
+  "domain": "40.76.98.237:9002",
+  "media_dir": "/public",
+  "portal_port": 9001,
+  "jobs_port": 9003,
+  "api_port": 9002
+}

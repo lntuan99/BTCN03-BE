@@ -5,5 +5,4 @@ __debug_bin
 vendor
 build
 logs
-zzz/config/*.json
 zzz/*.json

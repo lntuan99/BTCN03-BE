@@ -1,0 +1,14 @@
+{
+  "postgres_connection_string": "host=btcn.postgres.database.azure.com port=5432 user=adminuser@btcn dbname=btcndb password=bTCnWeD2 sslmode=require",
+  "worker_quantity": 5,
+  "postgres_log_mode": true,
+  "debug_api": true,
+  "app_name": "hcmus_web_2",
+  "organization_name": "LNT",
+  "cdn_url": "http://localhost:9001",
+  "domain": "http://127.0.0.1:9002",
+  "media_dir": "/public",
+  "portal_port": 9001,
+  "jobs_port": 9003,
+  "api_port": 9002
+}
