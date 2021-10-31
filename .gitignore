@@ -7,4 +7,3 @@ build
 logs
 zzz/config/*.json
 zzz/*.json
-go.*
