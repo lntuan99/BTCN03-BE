@@ -5,7 +5,6 @@
   "debug_api": true,
   "app_name": "hcmus_web_2",
   "organization_name": "LNT",
-  "cdn_url": "http://localhost:9001",
   "domain": "http://127.0.0.1:9002",
   "media_dir": "/public",
   "portal_port": 9001,

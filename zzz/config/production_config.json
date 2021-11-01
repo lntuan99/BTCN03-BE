@@ -5,7 +5,6 @@
   "debug_api": false,
   "app_name": "hcmus_web_2",
   "organization_name": "LNT",
-  "cdn_url": "localhost:9001",
   "domain": "https://api-btcn03.herokuapp.com",
   "media_dir": "/public",
   "portal_port": 9001,
