@@ -22,7 +22,11 @@ func main() {
 
     go func() {
         r := routers.Initialize()
-        r.Run(fmt.Sprintf(":%s", os.Getenv("PORT")))
+        port := os.Getenv("PORT")
+        if port == "" {
+            port = config.Config.ApiPort
+        }
+        r.Run(fmt.Sprintf(":%s", port))
     }()
 
     c := make(chan os.Signal, 1)
