@@ -1,12 +1,12 @@
 package model
 
 import (
-    "busmap.vn/librarycore/config"
     "fmt"
     "github.com/jinzhu/gorm"
     _ "github.com/jinzhu/gorm/dialects/postgres"
     "github.com/qor/media"
     "os"
+    "web2/btcn/config"
 )
 
 var DBInstance *gorm.DB

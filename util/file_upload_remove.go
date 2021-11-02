@@ -1,13 +1,13 @@
 package util
 
 import (
-    "busmap.vn/librarycore/config"
-    "busmap.vn/librarycore/config/constants"
     "errors"
     "fmt"
     "mime/multipart"
     "path/filepath"
     "time"
+    "web2/btcn/config"
+    "web2/btcn/config/constants"
 )
 
 func GetFolderPathForUserFile(userID uint) string {

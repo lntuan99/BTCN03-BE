@@ -1,4 +1,4 @@
-module busmap.vn/librarycore
+module web2/btcn
 
 go 1.16
 

@@ -1,8 +1,8 @@
 package api_classroom
 
 import (
-	"busmap.vn/librarycore/api/base"
-	"busmap.vn/librarycore/api/methods"
+	"web2/btcn/api/base"
+	"web2/btcn/api/methods"
 	"github.com/gin-gonic/gin"
 )
 

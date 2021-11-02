@@ -1,7 +1,7 @@
 package base
 
 import (
-    "busmap.vn/librarycore/util"
+    "web2/btcn/util"
     "github.com/gin-gonic/gin"
     "strconv"
     "strings"

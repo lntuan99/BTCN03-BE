@@ -1,13 +1,13 @@
 package routers
 
 import (
-    "busmap.vn/librarycore/api/base"
-    api_classroom "busmap.vn/librarycore/api/routers/api-classroom"
-    "busmap.vn/librarycore/config"
     "github.com/gin-contrib/cors"
     "github.com/gin-gonic/gin"
     "go.elastic.co/apm/module/apmgin"
     "os"
+    "web2/btcn/api/base"
+    api_classroom "web2/btcn/api/routers/api-classroom"
+    "web2/btcn/config"
 )
 
 func Initialize() *gin.Engine {

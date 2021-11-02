@@ -1,10 +1,10 @@
 package methods
 
 import (
-    "busmap.vn/librarycore/api/base"
-    req_res "busmap.vn/librarycore/api/req_res_struct"
-    "busmap.vn/librarycore/model"
-    "busmap.vn/librarycore/util"
+    "web2/btcn/api/base"
+    req_res "web2/btcn/api/req_res_struct"
+    "web2/btcn/model"
+    "web2/btcn/util"
     "fmt"
     "github.com/gin-gonic/gin"
     "path/filepath"

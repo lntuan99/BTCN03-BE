@@ -1,12 +1,12 @@
 package main
 
 import (
-    "busmap.vn/librarycore/api/routers"
-    "busmap.vn/librarycore/config"
-    "busmap.vn/librarycore/model"
     "fmt"
     "os"
     "os/signal"
+    "web2/btcn/api/routers"
+    "web2/btcn/config"
+    "web2/btcn/model"
 )
 
 func main() {

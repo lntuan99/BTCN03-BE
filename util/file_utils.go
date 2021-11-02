@@ -1,7 +1,7 @@
 package util
 
 import (
-    "busmap.vn/librarycore/config"
+    "web2/btcn/config"
     "errors"
     "fmt"
     "io"

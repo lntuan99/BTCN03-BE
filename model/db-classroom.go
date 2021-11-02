@@ -1,8 +1,8 @@
 package model
 
 import (
-	"busmap.vn/librarycore/util"
 	"github.com/jinzhu/gorm"
+	"web2/btcn/util"
 )
 
 type Classroom struct {

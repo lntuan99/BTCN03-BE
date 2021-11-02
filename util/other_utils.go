@@ -2,8 +2,8 @@ package util
 
 import (
 	"bufio"
-	"busmap.vn/librarycore/config"
-	"busmap.vn/librarycore/config/constants"
+	"web2/btcn/config"
+	"web2/btcn/config/constants"
 	"bytes"
 	"crypto/sha256"
 	"database/sql/driver"
