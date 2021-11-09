@@ -1,5 +1,5 @@
 {
-  "postgres_connection_string": "host=btcn.postgres.database.azure.com port=5432 user=adminuser@btcn dbname=btcndb password=bTCnWeD2 sslmode=require",
+  "postgres_connection_string": "host=103.82.20.59 port=5432 user=btcn03user dbname=btcn03db password=123456 sslmode=require",
   "worker_quantity": 5,
   "postgres_log_mode": true,
   "debug_api": true,
